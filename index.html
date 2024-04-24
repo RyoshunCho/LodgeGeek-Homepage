@@ -202,5 +202,23 @@
   <!--ページの上部へ戻るボタンとスクリプト-->
   <p class="scroll"><a href="#">↑</a></p>
   <script src="js/scroll.js"></script>
+  
+  <script>
+    window.chatwootSettings = {"position":"right","type":"standard","launcherTitle":"Start Chat"};
+    (function(d,t) {
+      var BASE_URL="https://app.chatwoot.com";
+      var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src=BASE_URL+"/packs/js/sdk.js";
+      g.defer = true;
+      g.async = true;
+      s.parentNode.insertBefore(g,s);
+      g.onload=function(){
+        window.chatwootSDK.run({
+          websiteToken: 'fNUydwnoCwHvES2ds5C8ByVC',
+          baseUrl: BASE_URL
+        })
+      }
+    })(document,"script");
+</script>
 </body>
 </html>
